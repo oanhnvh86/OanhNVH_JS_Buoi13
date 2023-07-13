@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- BS4 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+</head>
+
+<body>
+    <!-- E1: CALCULATE EMPLOYEE'S SALARY -->
+    <div class="container">
+        <h2 class="mb-4">E1: CALCULATE EMPLOYEE'S SALARY</h2>
+        <h4>Fix Salary Per Day</h4>
+        <div class="w-50">
+            <form>
+                <div class="form-group">
+                    <label for="inpWorkingDay">Working Days: </label>
+                    <input type="number" class="form-control" id="inpWorkingDay">
+                </div>
+                <button id="btnCalSalary" type="button" class="btn btn-primary">Calculate Employee's Salary</button>
+            </form>
+            <p id="txtCalSalary" class="alert alert-warning mt-3" ></p>
+        </div>
+
+        <h4>Input Salary Per Day</h4>
+        <div class="w-50">
+            <form>
+                <div class="form-group">
+                    <label for="inpsalaryPerDay2">Salary Per Day: </label>
+                    <input type="number" class="form-control" id="inpsalaryPerDay2" value="10000000">
+
+                    <label for="inpWorkingDay2">Working Days: </label>
+                    <input type="number" class="form-control" id="inpWorkingDay2">
+                </div>
+                <button id="btnCalSalary2" type="button" class="btn btn-primary">Calculate Employee's Salary 2</button>
+            </form>
+            <p id="txtCalSalary2" class="alert alert-warning mt-3" ></p>
+        </div>
+    </div>
+
+    <!-- E2: CALCULATE THE MEAN-->
+    <div class="container">
+        <h2 class="mb-4">E2: CALCULATE THE MEAN</h2>
+        <div class="w-50">
+            <form>
+                <div class="form-group">
+                    <label for="inpNumber1">Number1: </label>
+                    <input type="number" class="form-control" id="inpNumber1">
+                </div>
+                <div class="form-group">
+                    <label for="inpNumber2">Number2: </label>
+                    <input type="number" class="form-control" id="inpNumber2">
+                </div>
+                <div class="form-group">
+                    <label for="inpNumber3">Number3: </label>
+                    <input type="number" class="form-control" id="inpNumber3">
+                </div>
+                <div class="form-group">
+                    <label for="inpNumber4">Number4: </label>
+                    <input type="number" class="form-control" id="inpNumber4">
+                </div>
+                <div class="form-group">
+                    <label for="inpNumber5">Number5: </label>
+                    <input type="number" class="form-control" id="inpNumber5">
+                </div>
+                <button id="btnMean" type="button" class="btn btn-primary">Calculate The Mean</button>
+            </form>
+            <p id="txtMean" class="alert alert-warning mt-3" ></p>
+        </div>
+    </div>
+
+    <!-- E3: CURRENCY EXCHANGE-->
+    <div class="container">
+        <h2 class="mb-4">E3: CURRENCY EXCHANGE</h2>
+        <div class="w-50">
+            <form>
+                <div class="form-group">
+                    <label for="inpMoney">Please input: </label>
+                    <input type="number" class="form-control" id="inpMoney" placeholder="Input USD">
+                </div>
+                <button onclick="calAverage" id="btnCurrencyChange" type="button" class="btn btn-primary">CurrencyChange</button>
+            </form>
+            <p id="txtCurrencyChange" class="alert alert-warning mt-3" ></p>
+        </div>
+    </div>
+
+    <!-- E4: CALCULATE AREA AND PERIMETER OF RECTANGLE-->
+    <div class="container">
+        <h2 class="mb-4">E4: CALCULATE AREA AND PERIMETER OF RECTANGLE</h2>
+        <div class="w-50">
+            <form>
+                <div class="form-group">
+                    <label for="inpLength">Please input the length: </label>
+                    <input type="number" class="form-control" id="inpLength">
+                </div>
+                <div class="form-group">
+                    <label for="inpWidth">Please input the width: </label>
+                    <input type="number" class="form-control" id="inpWidth">
+                </div>
+                <button onclick="calAreaPeri()" id="btnAreaPeri" type="button" class="btn btn-primary">Cal Area & Perimeter</button>
+            </form>
+            <p id="txtAreaPeri" class="alert alert-warning mt-3" ></p>
+        </div>
+    </div>
+
+    <!-- E5: SUM 2 DIGITS-->
+    <div class="container">
+        <h2 class="mb-4">E5: SUM 2 DIGITS</h2>
+        <div class="w-50">
+            <form>
+                <div class="form-group">
+                    <!-- <label for="inpNumberSum">Please input the number: </label> -->
+                    <input type="number" class="form-control" id="inpNumberSum" placeholder="Please input the number with 2 chars"> 
+                </div>
+                <button id="btnSum" type="button" class="btn btn-primary">Sum</button>
+            </form>
+            <p id="txtSum" class="alert alert-warning mt-3" ></p>
+        </div>
+    </div>
+    </div>
+
+    <!-- BS4  -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+        crossorigin="anonymous"></script>
+
+    <!-- MAIN  -->
+    <script src="./js/exercise1.js"></script>
+    <script src="./js/exercise2.js"></script>
+    <script src="./js/exercise3.js"></script>
+    <script src="./js/exercise4.js"></script>
+    <script src="./js/exersice5.js"></script>
+</body>
+
+</html>
